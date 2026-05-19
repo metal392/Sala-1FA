@@ -1,0 +1,284 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyP1LEg2B3XU9JoRATtT8Rv8",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/metal392/Sala-1FA/blob/main/dia%2019/5\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "saldo = 100.00\n",
+        "opcao = \"\"\n",
+        "\n",
+        "print(\"--- Bem-vindo ao Caixa Eletrônico ---\")\n",
+        "\n",
+        "while opcao != \"4\":\n",
+        "    print(f\"\\nSaldo Atual: R$ {saldo:.2f}\")\n",
+        "    print(\"1. Verificar Saldo\")\n",
+        "    print(\"2. Depositar\")\n",
+        "    print(\"3. Sacar\")\n",
+        "    print(\"4. Sair\")\n",
+        "\n",
+        "    opcao = input(\"Escolha uma operação: \")\n",
+        "\n",
+        "    if opcao == \"1\":\n",
+        "        print(f\"Seu saldo é R$ {saldo:.2f}\")\n",
+        "\n",
+        "    elif opcao == \"2\":\n",
+        "        valor = float(input(\"Digite o valor do depósito: R$ \"))\n",
+        "        saldo += valor\n",
+        "        print(\"Depósito realizado com sucesso!\")\n",
+        "\n",
+        "    elif opcao == \"3\":\n",
+        "        valor = float(input(\"Digite o valor do saque: R$ \"))\n",
+        "        if valor <= saldo:\n",
+        "            saldo -= valor\n",
+        "            print(\"Saque realizado com sucesso!\")\n",
+        "        else:\n",
+        "            print(\"Saldo insuficiente.\")\n",
+        "\n",
+        "    elif opcao == \"4\":\n",
+        "        print(\"Encerrando o sistema. Até logo!\")\n",
+        "\n",
+        "    else:\n",
+        "        print(\"Opção inválida. Tente novamente.\")"
+      ],
+      "metadata": {
+        "id": "fPXkZR8Dr8T8"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#escrever um programa que recebe as notas do 04 bimestre e imprime a média com o  resultado aprovado, recuperação ou reprovado\n",
+        "\n",
+        "#contições: utilizar while\n",
+        "# nota igual ou maior que  7 = aprovado\n",
+        "#nota igual ou maior que 5 = recuperação\n",
+        "#nota menor que 5 = reprovado\n",
+        "\n",
+        "bimestre = 0\n",
+        "nota = 0\n",
+        " while True:\n",
+        "  nota = float (input (\"Digite a nota do bimestre: \"))"
+      ],
+      "metadata": {
+        "id": "HkLNsP3CXPh7"
+      },
+      "execution_count": 58,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#escrever um programa que recebe as notas do 04 bimestre e imprime a média com o  resultado aprovado, recuperação ou reprovado\n",
+        "\n",
+        "#contições: utilizar while\n",
+        "# nota igual ou maior que  7 = aprovado\n",
+        "#nota igual ou maior que 5 = recuperação\n",
+        "#nota menor que 5 = reprovado\n",
+        "\n",
+        "bimestre = 1\n",
+        "total_notas = 0\n",
+        "\n",
+        "while bimestre <= 4:\n",
+        "  try:\n",
+        "    nota = float(input(f\"Digite a nota do {bimestre}º bimestre: \"))\n",
+        "    if 0 <= nota <= 10:\n",
+        "      total_notas += nota\n",
+        "      bimestre += 1\n",
+        "    else:\n",
+        "      print(\"A nota deve estar entre 0 e 10.\")\n",
+        "  except ValueError:\n",
+        "    print(\"Entrada inválida. Por favor, digite um número.\")\n",
+        "\n",
+        "if bimestre > 1:\n",
+        "  media = total_notas / (bimestre -1)\n",
+        "  print(f\"\\nMédia final: {media:.2f}\")\n",
+        "\n",
+        "  if media >= 7:\n",
+        "    print(\"Resultado: Aprovado\")\n",
+        "  elif media >= 5:\n",
+        "    print(\"Resultado: Recuperação\")\n",
+        "  else:\n",
+        "    print(\"Resultado: Reprovado\")\n",
+        "else:\n",
+        "  print(\"Nenhuma nota foi inserida para calcular a média.\")\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1p4gRnrBR48n",
+        "outputId": "8b1ebd75-95a3-4ef1-98f1-c7042137f86b"
+      },
+      "execution_count": 65,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a nota do 1º bimestre: 10\n",
+            "Digite a nota do 2º bimestre: 10\n",
+            "Digite a nota do 3º bimestre: 10\n",
+            "Digite a nota do 4º bimestre: 10\n",
+            "\n",
+            "Média final: 10.00\n",
+            "Resultado: Aprovado\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "try:\n",
+        "  contador = int (input(\"digite um numero de 0 a 50: \"))\n",
+        "\n",
+        "  while contador >= 0:\n",
+        "    print (contador)\n",
+        "    contador -=1\n",
+        "    print (\"Acabou!\")\n",
+        "except:\n",
+        "  print (\"digite apenas numeros\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VsAKC-czVO5n",
+        "outputId": "bf3de736-b6c2-435d-9dab-2c033ab35203"
+      },
+      "execution_count": 57,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "digite apenas numeros\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Escrever um programa que faz uma contagem regresiva de 10 até 0\n",
+        "#imprimir uma mensage de acabou no final\n",
+        "\n",
+        "contador = 10\n",
+        "while contador >= 0:\n",
+        "  print (contador)\n",
+        "  contador = contador - 1\n",
+        "print ('Acabou!')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "y8_GZCnkS7uQ",
+        "outputId": "bd286ae7-9bea-44c6-a62f-a93cace0912b"
+      },
+      "execution_count": 39,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n",
+            "9\n",
+            "8\n",
+            "7\n",
+            "6\n",
+            "5\n",
+            "4\n",
+            "3\n",
+            "2\n",
+            "1\n",
+            "0\n",
+            "Acabou!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "contador = 0\n",
+        "\n",
+        "while contador < 11:\n",
+        "  print (contador)\n",
+        "  contador = contador + 1\n",
+        "print ('max')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Zxj53w2TSV_e",
+        "outputId": "48dea77f-3df0-43f5-d30d-5ad41ae761cc"
+      },
+      "execution_count": 51,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "7\n",
+            "8\n",
+            "9\n",
+            "10\n",
+            "max\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "-tbHemARRAGB"
+      },
+      "outputs": [],
+      "source": [
+        "# imprimir numeros de 0 até 5\n",
+        "\n",
+        "for in range (5)\n",
+        "\n",
+        ""
+      ]
+    }
+  ]
+}
