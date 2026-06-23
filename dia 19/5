@@ -1,20 +1,4 @@
 {
-  "nbformat": 4,
-  "nbformat_minor": 0,
-  "metadata": {
-    "colab": {
-      "provenance": [],
-      "authorship_tag": "ABX9TyP1LEg2B3XU9JoRATtT8Rv8",
-      "include_colab_link": true
-    },
-    "kernelspec": {
-      "name": "python3",
-      "display_name": "Python 3"
-    },
-    "language_info": {
-      "name": "python"
-    }
-  },
   "cells": [
     {
       "cell_type": "markdown",
@@ -28,6 +12,258 @@
     },
     {
       "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "background_save": true,
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1K57qUP-lb_N",
+        "outputId": "f022ced4-97bd-4868-aa75-11a206dca6d7"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "--- DESCUBRA A SENHA ---\n"
+          ]
+        }
+      ],
+      "source": [
+        " # Esrever um programa que verifica a senha, o usuario terá 3 tebtativas caso erre as 03 imrpimir mensagem de \"acesso negado e tente novamente mais tarde\" e encerrar o programa\n",
+        "\n",
+        "senha = 1234\n",
+        "tent  = 0\n",
+        "senha2 = 0\n",
+        "print(\"--- DESCUBRA A SENHA ---\")\n",
+        "\n",
+        "while tent < 3 and senha2 != senha:\n",
+        "  tent += 1\n",
+        "  senha2 = int(input(\"Digite a senha: \"))\n",
+        "\n",
+        "  if senha2 == senha:\n",
+        "    print(\"Acesso permitido\")\n",
+        "  else:\n",
+        "    print(\"Acesso negado\")\n",
+        "\n",
+        "  if tent > 3:\n",
+        "    print(\"Acesso negado, tente mais tarde\")\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "iEi3OC7fXvMH",
+        "outputId": "5421505b-5197-4c30-aa8b-dce69dfcd43c"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "--- Jogo inteligente ---\n",
+            "1. Par/Impar\n",
+            "2. Positivo\n",
+            "3. Maior de 02 numeros\n",
+            "4. Sair\n",
+            "Escolha uma opção: \n",
+            "Você escolheu par/impar\n",
+            "A soma 10 é Par\n",
+            "Escolha uma opção: \n"
+          ]
+        },
+        {
+          "name": "stderr",
+          "output_type": "stream",
+          "text": [
+            "\n",
+            "KeyboardInterrupt\n",
+            "\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Jogo inteligente\n",
+        "\n",
+        "# 1 - par/impar\n",
+        "# 2 - Positivo\n",
+        "# 3 - Maior de 02 numeros\n",
+        "# 4 - Sair\n",
+        "\n",
+        "print(\"--- Jogo inteligente ---\")\n",
+        "print(\"1. Par/Impar\")\n",
+        "print(\"2. Positivo\")\n",
+        "print(\"3. Maior de 02 numeros\")\n",
+        "print(\"4. Sair\")\n",
+        "\n",
+        "opt = 0\n",
+        "\n",
+        "while opt != 4:\n",
+        "  print(\"Escolha uma opção: \")\n",
+        "  opt = int(input())\n",
+        "\n",
+        "  if opt == 1:\n",
+        "    print(\"Você escolheu par/impar\")\n",
+        "    a = int(input(\"Digite o primeiro numero: \"))\n",
+        "\n",
+        "\n",
+        "\n",
+        "    if a % 2 == 0:\n",
+        "      print(f\"A soma {a} é Par\")\n",
+        "    else:\n",
+        "      print(f\"A soma {a} é Impar\")\n",
+        "\n",
+        "  elif opt == 2:\n",
+        "    print(\"Você escolheu positivo\")\n",
+        "    a = int(input(\"Digite um numero: \"))\n",
+        "    if a > 0:\n",
+        "      print(\"Positivo\")\n",
+        "    elif a < 0:\n",
+        "      print(\"Negativo\")\n",
+        "    else:\n",
+        "      print(\"Zero\")\n",
+        "\n",
+        "  elif opt == 3:\n",
+        "    print(\"Você escolheu maior de 02 numeros\")\n",
+        "    a = int(input(\"Digite o primeiro numero: \"))\n",
+        "    b = int(input(\"Digite o segundo numero: \"))\n",
+        "\n",
+        "    if a > b:\n",
+        "      print(f\"O numero {a} é maior que {b}\")\n",
+        "    elif b > a:\n",
+        "      print(f\"O numero {b} é maior que {a}\")\n",
+        "    else:\n",
+        "      print(\"Os numeros são iguais\")\n",
+        "\n",
+        "  elif opt == 4:\n",
+        "    print(\"Você escolheu sair\")\n",
+        "    print(\"Obrigado por jogar!\")\n",
+        "\n",
+        "  else:\n",
+        "    print(\"Opção inválida. Por favor, escolha uma opção de 1 a 4.\")\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 547
+        },
+        "id": "qV75LtyxVIjM",
+        "outputId": "fb8f2cec-85ae-4508-ae56-e80c80b59e09"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "--- Calculadora ---\n",
+            "1. Somar\n",
+            "2. Subtrair\n",
+            "3. Multiplicação\n",
+            "4. Divisão\n",
+            "5. Sair\n",
+            "Escolha uma opção: 1\n",
+            "Você escolheu somar\n",
+            "Digite um numero 1\n",
+            "Digite um numero 1\n",
+            "O resultado é 2\n"
+          ]
+        },
+        {
+          "ename": "KeyboardInterrupt",
+          "evalue": "Interrupted by user",
+          "output_type": "error",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipykernel_10634/3380025962.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m     19\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     20\u001b[0m \u001b[0;32mwhile\u001b[0m \u001b[0mopt\u001b[0m \u001b[0;34m!=\u001b[0m \u001b[0;36m5\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 21\u001b[0;31m     \u001b[0mopt\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Escolha uma opção: \"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     22\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     23\u001b[0m     \u001b[0;32mif\u001b[0m \u001b[0mopt\u001b[0m \u001b[0;34m==\u001b[0m \u001b[0;36m1\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.12/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36mraw_input\u001b[0;34m(self, prompt)\u001b[0m\n\u001b[1;32m   1175\u001b[0m                 \u001b[0;34m\"raw_input was called, but this frontend does not support input requests.\"\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1176\u001b[0m             )\n\u001b[0;32m-> 1177\u001b[0;31m         return self._input_request(\n\u001b[0m\u001b[1;32m   1178\u001b[0m             \u001b[0mstr\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mprompt\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1179\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_ident\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"shell\"\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.12/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36m_input_request\u001b[0;34m(self, prompt, ident, parent, password)\u001b[0m\n\u001b[1;32m   1217\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1218\u001b[0m                 \u001b[0;31m# re-raise KeyboardInterrupt, to truncate traceback\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1219\u001b[0;31m                 \u001b[0;32mraise\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Interrupted by user\"\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mfrom\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1220\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mException\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1221\u001b[0m                 \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mlog\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mwarning\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Invalid Message:\"\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mexc_info\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mTrue\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m: Interrupted by user"
+          ]
+        }
+      ],
+      "source": [
+        "# Calculadora com as 4 opções\n",
+        "\n",
+        "# Menu\n",
+        "# Opção 1 - Somar\n",
+        "# Opção 2 - Subtrair\n",
+        "# Opção 3 - Multiplicação\n",
+        "# Opção 4 - Divisão\n",
+        "# Opção 5 - sair\n",
+        "\n",
+        "\n",
+        "print(\"--- Calculadora ---\")\n",
+        "print(\"1. Somar\")\n",
+        "print(\"2. Subtrair\")\n",
+        "print(\"3. Multiplicação\")\n",
+        "print(\"4. Divisão\")\n",
+        "print(\"5. Sair\")\n",
+        "\n",
+        "opt = 0\n",
+        "\n",
+        "while opt != 5:\n",
+        "    opt = int(input(\"Escolha uma opção: \"))\n",
+        "\n",
+        "    if opt == 1:\n",
+        "        print(\"Você escolheu somar\")\n",
+        "        a = int(input(\"Digite um numero \"))\n",
+        "        b = int(input(\"Digite um numero \"))\n",
+        "        c = a + b\n",
+        "        print(f\"O resultado é {c}\")\n",
+        "\n",
+        "    elif opt == 2:\n",
+        "        print(\"Você escolheu subtrair\")\n",
+        "        a = int(input(\"Digite um numero \"))\n",
+        "        b = int(input(\"Digite um numero \"))\n",
+        "        c = a - b\n",
+        "        print(f\"O resultado é {c}\")\n",
+        "\n",
+        "    elif opt == 3:\n",
+        "        print(\"Você escolheu multiplicar\")\n",
+        "        a = int(input(\"Digite um numero \"))\n",
+        "        b = int(input(\"Digite um numero \"))\n",
+        "        c = a * b\n",
+        "        print(f\"O resultado é {c}\")\n",
+        "\n",
+        "    elif opt == 4:\n",
+        "        print(\"Você escolheu dividir\")\n",
+        "        a = int(input(\"Digite um numero \"))\n",
+        "        b = int(input(\"Digite um numero \"))\n",
+        "        if b == 0:\n",
+        "            print(\"Erro: Divisão por zero não é permitida.\")\n",
+        "        else:\n",
+        "            c = a / b\n",
+        "            print(f\"O resultado é {c}\")\n",
+        "\n",
+        "    elif opt == 5:\n",
+        "\n",
+        "        print(\"Você escolheu sair\")\n",
+        "\n",
+        "\n",
+        "    else:\n",
+        "        print(\"Opção inválida. Por favor, escolha uma opção de 1 a 5.\")\n",
+        "\n",
+        "print(\"Obrigado por usar a calculadora!\")\n",
+        "print(\"\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "fPXkZR8Dr8T8"
+      },
+      "outputs": [],
       "source": [
         "saldo = 100.00\n",
         "opcao = \"\"\n",
@@ -64,15 +300,15 @@
         "\n",
         "    else:\n",
         "        print(\"Opção inválida. Tente novamente.\")"
-      ],
-      "metadata": {
-        "id": "fPXkZR8Dr8T8"
-      },
-      "execution_count": null,
-      "outputs": []
+      ]
     },
     {
       "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "HkLNsP3CXPh7"
+      },
+      "outputs": [],
       "source": [
         "#escrever um programa que recebe as notas do 04 bimestre e imprime a média com o  resultado aprovado, recuperação ou reprovado\n",
         "\n",
@@ -85,15 +321,33 @@
         "nota = 0\n",
         " while True:\n",
         "  nota = float (input (\"Digite a nota do bimestre: \"))"
-      ],
-      "metadata": {
-        "id": "HkLNsP3CXPh7"
-      },
-      "execution_count": 58,
-      "outputs": []
+      ]
     },
     {
       "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1p4gRnrBR48n",
+        "outputId": "8b1ebd75-95a3-4ef1-98f1-c7042137f86b"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Digite a nota do 1º bimestre: 10\n",
+            "Digite a nota do 2º bimestre: 10\n",
+            "Digite a nota do 3º bimestre: 10\n",
+            "Digite a nota do 4º bimestre: 10\n",
+            "\n",
+            "Média final: 10.00\n",
+            "Resultado: Aprovado\n"
+          ]
+        }
+      ],
       "source": [
         "#escrever um programa que recebe as notas do 04 bimestre e imprime a média com o  resultado aprovado, recuperação ou reprovado\n",
         "\n",
@@ -127,35 +381,50 @@
         "  else:\n",
         "    print(\"Resultado: Reprovado\")\n",
         "else:\n",
-        "  print(\"Nenhuma nota foi inserida para calcular a média.\")\n",
-        ""
-      ],
+        "  print(\"Nenhuma nota foi inserida para calcular a média.\")\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "id": "1p4gRnrBR48n",
-        "outputId": "8b1ebd75-95a3-4ef1-98f1-c7042137f86b"
+        "id": "VsAKC-czVO5n",
+        "outputId": "7ecd5b68-fed9-46ea-e15b-16e8cab8147e"
       },
-      "execution_count": 65,
       "outputs": [
         {
           "output_type": "stream",
           "name": "stdout",
           "text": [
-            "Digite a nota do 1º bimestre: 10\n",
-            "Digite a nota do 2º bimestre: 10\n",
-            "Digite a nota do 3º bimestre: 10\n",
-            "Digite a nota do 4º bimestre: 10\n",
-            "\n",
-            "Média final: 10.00\n",
-            "Resultado: Aprovado\n"
+            "digite um numero de 0 a 50: 10\n",
+            "10\n",
+            "Acabou!\n",
+            "9\n",
+            "Acabou!\n",
+            "8\n",
+            "Acabou!\n",
+            "7\n",
+            "Acabou!\n",
+            "6\n",
+            "Acabou!\n",
+            "5\n",
+            "Acabou!\n",
+            "4\n",
+            "Acabou!\n",
+            "3\n",
+            "Acabou!\n",
+            "2\n",
+            "Acabou!\n",
+            "1\n",
+            "Acabou!\n",
+            "0\n",
+            "Acabou!\n"
           ]
         }
-      ]
-    },
-    {
-      "cell_type": "code",
+      ],
       "source": [
         "try:\n",
         "  contador = int (input(\"digite um numero de 0 a 50: \"))\n",
@@ -166,37 +435,11 @@
         "    print (\"Acabou!\")\n",
         "except:\n",
         "  print (\"digite apenas numeros\")"
-      ],
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "VsAKC-czVO5n",
-        "outputId": "bf3de736-b6c2-435d-9dab-2c033ab35203"
-      },
-      "execution_count": 57,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "digite apenas numeros\n"
-          ]
-        }
       ]
     },
     {
       "cell_type": "code",
-      "source": [
-        "#Escrever um programa que faz uma contagem regresiva de 10 até 0\n",
-        "#imprimir uma mensage de acabou no final\n",
-        "\n",
-        "contador = 10\n",
-        "while contador >= 0:\n",
-        "  print (contador)\n",
-        "  contador = contador - 1\n",
-        "print ('Acabou!')"
-      ],
+      "execution_count": null,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/"
@@ -204,11 +447,10 @@
         "id": "y8_GZCnkS7uQ",
         "outputId": "bd286ae7-9bea-44c6-a62f-a93cace0912b"
       },
-      "execution_count": 39,
       "outputs": [
         {
-          "output_type": "stream",
           "name": "stdout",
+          "output_type": "stream",
           "text": [
             "10\n",
             "9\n",
@@ -224,18 +466,21 @@
             "Acabou!\n"
           ]
         }
+      ],
+      "source": [
+        "#Escrever um programa que faz uma contagem regresiva de 10 até 0\n",
+        "#imprimir uma mensage de acabou no final\n",
+        "\n",
+        "contador = 10\n",
+        "while contador >= 0:\n",
+        "  print (contador)\n",
+        "  contador = contador - 1\n",
+        "print ('Acabou!')"
       ]
     },
     {
       "cell_type": "code",
-      "source": [
-        "contador = 0\n",
-        "\n",
-        "while contador < 11:\n",
-        "  print (contador)\n",
-        "  contador = contador + 1\n",
-        "print ('max')"
-      ],
+      "execution_count": null,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/"
@@ -243,11 +488,10 @@
         "id": "Zxj53w2TSV_e",
         "outputId": "48dea77f-3df0-43f5-d30d-5ad41ae761cc"
       },
-      "execution_count": 51,
       "outputs": [
         {
-          "output_type": "stream",
           "name": "stdout",
+          "output_type": "stream",
           "text": [
             "0\n",
             "1\n",
@@ -263,6 +507,14 @@
             "max\n"
           ]
         }
+      ],
+      "source": [
+        "contador = 0\n",
+        "\n",
+        "while contador < 11:\n",
+        "  print (contador)\n",
+        "  contador = contador + 1\n",
+        "print ('max')"
       ]
     },
     {
@@ -276,9 +528,24 @@
         "# imprimir numeros de 0 até 5\n",
         "\n",
         "for in range (5)\n",
-        "\n",
-        ""
+        "\n"
       ]
     }
-  ]
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyODmEXVgfOA/Z4ablApCGBA",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
 }
