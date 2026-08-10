@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dai Gurren Banner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .banner {
+      width: 1600px;
+      height: 900px;
+      background-color: #CD0300;
+      position: relative;
+      overflow: hidden;
+      font-family: 'Alfa Slab One', serif;
+    }
+
+    .stripe {
+      position: absolute;
+      top: 324px;
+      left: 0;
+      width: 100%;
+      height: 234px;
+      background-color: #FFFFFF;
+      display: flex;
+      align-items: center;
+    }
+
+    .text-dai {
+      width: 658px;
+      text-align: center;
+      font-size: 215px;
+      color: #000000;
+      line-height: 234px;
+    }
+
+    .logo {
+      width: 283px;
+      height: 234px;
+      object-fit: cover;
+    }
+
+    .text-gurren {
+      width: 659px;
+      text-align: center;
+      font-size: 130px;
+      color: #000000;
+      line-height: 234px;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <div class="stripe">
+      <div class="text-dai">DAI</div>
+      <!-- Substitua pelo caminho da sua imagem do logo -->
+      <img class="logo" src="logo-dai-gurren.png" alt="Logo Dai Gurren">
+      <div class="text-gurren">GURREN</div>
+    </div>
+  </div>
+</body>
+</html>
